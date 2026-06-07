@@ -1,17 +1,19 @@
 {
-  "name": "schema-resource-mapping",
+  "name": "invoice-automation",
   "version": "1.0.0",
-  "description": "A Node.js utility for replacing resource names in JSON schema files with CSV-based mappings.",
-  "main": "resourceMappingHandler.js",
+  "description": "Invoice email collection, invoice image export, city grouping, and QR-code invoice application utilities.",
+  "main": "src/invoice/invoiceConfig.js",
   "scripts": {
-    "examples": "node usageExamples.js"
+    "examples": "node examples/usageExamples.js",
+    "invoices": "python3 scripts/invoice_mail_to_images.py"
   },
   "keywords": [
-    "schema",
-    "resource-mapping",
-    "csv",
-    "dry-run",
-    "handler-chain"
+    "invoice",
+    "automation",
+    "email",
+    "qr-code",
+    "idempotency",
+    "city-grouping"
   ],
   "author": "",
   "license": "MIT",

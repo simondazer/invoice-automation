@@ -34,7 +34,8 @@ INVOICE_KEYWORDS = ("发票", "电子发票", "invoice", "Invoice")
 BACKUP_INVOICE_SUFFIXES = (".pdf", ".ofd", ".xml")
 IMAGE_INVOICE_SUFFIXES = (".png", ".jpg", ".jpeg", ".webp")
 SUPPORTED_INVOICE_SUFFIXES = BACKUP_INVOICE_SUFFIXES + IMAGE_INVOICE_SUFFIXES
-DEFAULT_OUTPUT_ROOT = Path.home() / "github-projects" / "schema-resource-mapping" / "invoice-outputs"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "invoice-outputs"
 DEFAULT_IMAGE_SIZE = 2480
 
 

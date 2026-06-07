@@ -3,13 +3,13 @@
  * 展示如何集成和使用整个资源名替换系统
  */
 
-const { ResourceMappingConfig, ResourceMappingHandler, ResourceMappingUpdater } = require('./resourceMappingHandler');
-const { CSVParser, ResourceMappingCSVParser } = require('./csvParser');
-const { HandlerChainManager, PredefinedChains, HandlerChainFactory } = require('./handlerChain');
-const { DryRunExecutor, ErrorHandler } = require('./dryRunAndErrorHandling');
-const { AttachmentIdempotencyManager } = require('./attachmentIdempotency');
-const { InvoiceCityOrganizer } = require('./invoiceCityOrganizer');
-const { InvoiceConfigManager } = require('./invoiceConfig');
+const { ResourceMappingConfig, ResourceMappingHandler, ResourceMappingUpdater } = require('../src/resource-mapping/resourceMappingHandler');
+const { CSVParser, ResourceMappingCSVParser } = require('../src/resource-mapping/csvParser');
+const { HandlerChainManager, PredefinedChains, HandlerChainFactory } = require('../src/resource-mapping/handlerChain');
+const { DryRunExecutor, ErrorHandler } = require('../src/resource-mapping/dryRunAndErrorHandling');
+const { AttachmentIdempotencyManager } = require('../src/invoice/attachmentIdempotency');
+const { InvoiceCityOrganizer } = require('../src/invoice/invoiceCityOrganizer');
+const { InvoiceConfigManager } = require('../src/invoice/invoiceConfig');
 
 /**
  * 示例1: 基本使用
@@ -112,7 +112,7 @@ async function handlerChainExample() {
     });
 
     // 3. 注册处理器
-    const { ValidationHandler, BackupHandler, ResourceMappingHandler } = require('./handlerChain');
+    const { ValidationHandler, BackupHandler, ResourceMappingHandler } = require('../src/resource-mapping/handlerChain');
 
     chainManager.registerHandler(new ValidationHandler({
       requiredFields: ['type', 'resources']
@@ -603,7 +603,7 @@ async function invoiceConfigExample() {
 
   try {
     const manager = new InvoiceConfigManager({
-      configPath: './invoice.config.example.json'
+      configPath: './config/invoice.config.example.json'
     });
     const config = manager.load();
     const validation = manager.validate(config, {

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DEFAULT_CONFIG_PATH = path.join(__dirname, 'invoice.config.json');
+const DEFAULT_CONFIG_PATH = path.resolve(__dirname, '..', '..', 'invoice.config.json');
 const DEFAULT_MIN_INVOICE_AMOUNT = 100;
 
 /**
