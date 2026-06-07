@@ -1,0 +1,41 @@
+node_modules/
+.DS_Store
+
+# Local sensitive config
+invoice.config.json
+
+# Runtime outputs / generated data
+data/
+logs/
+reports/
+backups/
+dry-run-results/
+output/
+outputs/
+export/
+exports/
+preview/
+previews/
+*-output/
+*-outputs/
+*-export/
+*-exports/
+*-preview/
+*-previews/
+invoice-output/
+invoice-output-backup/
+invoice-outputs/
+invoice-export-preview-*/
+invoice-final-output-preview/
+sample-invoice-artifacts/
+*.log
+*.backup
+*.tmp
+*.temp
+resource_mapping_report_*.csv
+
+# Sample generated files
+default_mapping.csv
+special_mapping.csv
+sample-repo/
+custom-backups/

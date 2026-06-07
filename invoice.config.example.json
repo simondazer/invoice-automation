@@ -1,0 +1,7 @@
+{
+  "buyerName": "你的发票抬头或姓名",
+  "buyerTaxNo": "",
+  "buyerEmail": "your-email@example.com",
+  "buyerMobile": "13800138000",
+  "minInvoiceAmount": 100
+}

@@ -1,0 +1,24 @@
+{
+  "name": "schema-resource-mapping",
+  "version": "1.0.0",
+  "description": "A Node.js utility for replacing resource names in JSON schema files with CSV-based mappings.",
+  "main": "resourceMappingHandler.js",
+  "scripts": {
+    "examples": "node usageExamples.js"
+  },
+  "keywords": [
+    "schema",
+    "resource-mapping",
+    "csv",
+    "dry-run",
+    "handler-chain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "glob": "^10.4.5",
+    "winston": "^3.17.0"
+  }
+}
